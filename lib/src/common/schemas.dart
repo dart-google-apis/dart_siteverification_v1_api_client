@@ -6,10 +6,10 @@ class SiteVerificationWebResourceGettokenRequest {
   SiteVerificationWebResourceGettokenRequestSite site;
 
   /** The verification method that will be used to verify this site. For sites, 'FILE' or 'META' methods may be used. For domains, only 'DNS' may be used. */
-  String verificationMethod;
+  core.String verificationMethod;
 
   /** Create new SiteVerificationWebResourceGettokenRequest from JSON data */
-  SiteVerificationWebResourceGettokenRequest.fromJson(Map json) {
+  SiteVerificationWebResourceGettokenRequest.fromJson(core.Map json) {
     if (json.containsKey("site")) {
       site = new SiteVerificationWebResourceGettokenRequestSite.fromJson(json["site"]);
     }
@@ -19,8 +19,8 @@ class SiteVerificationWebResourceGettokenRequest {
   }
 
   /** Create JSON Object for SiteVerificationWebResourceGettokenRequest */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (site != null) {
       output["site"] = site.toJson();
@@ -33,7 +33,7 @@ class SiteVerificationWebResourceGettokenRequest {
   }
 
   /** Return String representation of SiteVerificationWebResourceGettokenRequest */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -41,13 +41,13 @@ class SiteVerificationWebResourceGettokenRequest {
 class SiteVerificationWebResourceGettokenRequestSite {
 
   /** The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name. */
-  String identifier;
+  core.String identifier;
 
   /** The type of resource to be verified. Can be SITE or INET_DOMAIN (domain name). */
-  String type;
+  core.String type;
 
   /** Create new SiteVerificationWebResourceGettokenRequestSite from JSON data */
-  SiteVerificationWebResourceGettokenRequestSite.fromJson(Map json) {
+  SiteVerificationWebResourceGettokenRequestSite.fromJson(core.Map json) {
     if (json.containsKey("identifier")) {
       identifier = json["identifier"];
     }
@@ -57,8 +57,8 @@ class SiteVerificationWebResourceGettokenRequestSite {
   }
 
   /** Create JSON Object for SiteVerificationWebResourceGettokenRequestSite */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (identifier != null) {
       output["identifier"] = identifier;
@@ -71,20 +71,20 @@ class SiteVerificationWebResourceGettokenRequestSite {
   }
 
   /** Return String representation of SiteVerificationWebResourceGettokenRequestSite */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class SiteVerificationWebResourceGettokenResponse {
 
   /** The verification method to use in conjunction with this token. For FILE, the token should be placed in the top-level directory of the site, stored inside a file of the same name. For META, the token should be placed in the HEAD tag of the default page that is loaded for the site. For DNS, the token should be placed in a TXT record of the domain. */
-  String method;
+  core.String method;
 
   /** The verification token. The token must be placed appropriately in order for verification to succeed. */
-  String token;
+  core.String token;
 
   /** Create new SiteVerificationWebResourceGettokenResponse from JSON data */
-  SiteVerificationWebResourceGettokenResponse.fromJson(Map json) {
+  SiteVerificationWebResourceGettokenResponse.fromJson(core.Map json) {
     if (json.containsKey("method")) {
       method = json["method"];
     }
@@ -94,8 +94,8 @@ class SiteVerificationWebResourceGettokenResponse {
   }
 
   /** Create JSON Object for SiteVerificationWebResourceGettokenResponse */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (method != null) {
       output["method"] = method;
@@ -108,17 +108,17 @@ class SiteVerificationWebResourceGettokenResponse {
   }
 
   /** Return String representation of SiteVerificationWebResourceGettokenResponse */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class SiteVerificationWebResourceListResponse {
 
   /** The list of sites that are owned by the authenticated user. */
-  List<SiteVerificationWebResourceResource> items;
+  core.List<SiteVerificationWebResourceResource> items;
 
   /** Create new SiteVerificationWebResourceListResponse from JSON data */
-  SiteVerificationWebResourceListResponse.fromJson(Map json) {
+  SiteVerificationWebResourceListResponse.fromJson(core.Map json) {
     if (json.containsKey("items")) {
       items = [];
       json["items"].forEach((item) {
@@ -128,11 +128,11 @@ class SiteVerificationWebResourceListResponse {
   }
 
   /** Create JSON Object for SiteVerificationWebResourceListResponse */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (items != null) {
-      output["items"] = new List();
+      output["items"] = new core.List();
       items.forEach((item) {
         output["items"].add(item.toJson());
       });
@@ -142,23 +142,23 @@ class SiteVerificationWebResourceListResponse {
   }
 
   /** Return String representation of SiteVerificationWebResourceListResponse */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class SiteVerificationWebResourceResource {
 
   /** The string used to identify this site. This value should be used in the "id" portion of the REST URL for the Get, Update, and Delete operations. */
-  String id;
+  core.String id;
 
   /** The email addresses of all verified owners. */
-  List<String> owners;
+  core.List<core.String> owners;
 
   /** The address and type of a site that is verified or will be verified. */
   SiteVerificationWebResourceResourceSite site;
 
   /** Create new SiteVerificationWebResourceResource from JSON data */
-  SiteVerificationWebResourceResource.fromJson(Map json) {
+  SiteVerificationWebResourceResource.fromJson(core.Map json) {
     if (json.containsKey("id")) {
       id = json["id"];
     }
@@ -174,14 +174,14 @@ class SiteVerificationWebResourceResource {
   }
 
   /** Create JSON Object for SiteVerificationWebResourceResource */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (id != null) {
       output["id"] = id;
     }
     if (owners != null) {
-      output["owners"] = new List();
+      output["owners"] = new core.List();
       owners.forEach((item) {
         output["owners"].add(item);
       });
@@ -194,7 +194,7 @@ class SiteVerificationWebResourceResource {
   }
 
   /** Return String representation of SiteVerificationWebResourceResource */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -202,13 +202,13 @@ class SiteVerificationWebResourceResource {
 class SiteVerificationWebResourceResourceSite {
 
   /** The site identifier. If the type is set to SITE, the identifier is a URL. If the type is set to INET_DOMAIN, the site identifier is a domain name. */
-  String identifier;
+  core.String identifier;
 
   /** The site type. Can be SITE or INET_DOMAIN (domain name). */
-  String type;
+  core.String type;
 
   /** Create new SiteVerificationWebResourceResourceSite from JSON data */
-  SiteVerificationWebResourceResourceSite.fromJson(Map json) {
+  SiteVerificationWebResourceResourceSite.fromJson(core.Map json) {
     if (json.containsKey("identifier")) {
       identifier = json["identifier"];
     }
@@ -218,8 +218,8 @@ class SiteVerificationWebResourceResourceSite {
   }
 
   /** Create JSON Object for SiteVerificationWebResourceResourceSite */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (identifier != null) {
       output["identifier"] = identifier;
@@ -232,7 +232,7 @@ class SiteVerificationWebResourceResourceSite {
   }
 
   /** Return String representation of SiteVerificationWebResourceResourceSite */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 

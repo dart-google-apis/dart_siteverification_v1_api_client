@@ -12,13 +12,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> delete(String id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> delete(core.String id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "webResource/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -49,13 +49,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<SiteVerificationWebResourceResource> get(String id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<SiteVerificationWebResourceResource> get(core.String id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "webResource/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -86,13 +86,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<SiteVerificationWebResourceGettokenResponse> getToken(SiteVerificationWebResourceGettokenRequest request, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<SiteVerificationWebResourceGettokenResponse> getToken(SiteVerificationWebResourceGettokenRequest request, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "token";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -123,13 +123,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<SiteVerificationWebResourceResource> insert(SiteVerificationWebResourceResource request, String verificationMethod, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<SiteVerificationWebResourceResource> insert(SiteVerificationWebResourceResource request, core.String verificationMethod, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "webResource";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (verificationMethod == null) paramErrors.add("verificationMethod is required");
     if (verificationMethod != null) queryParams["verificationMethod"] = verificationMethod;
     if (optParams != null) {
@@ -158,13 +158,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<SiteVerificationWebResourceListResponse> list({Map optParams}) {
-    var completer = new Completer();
+  async.Future<SiteVerificationWebResourceListResponse> list({core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "webResource";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -195,13 +195,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<SiteVerificationWebResourceResource> patch(SiteVerificationWebResourceResource request, String id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<SiteVerificationWebResourceResource> patch(SiteVerificationWebResourceResource request, core.String id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "webResource/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
@@ -234,13 +234,13 @@ class WebResourceResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<SiteVerificationWebResourceResource> update(SiteVerificationWebResourceResource request, String id, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<SiteVerificationWebResourceResource> update(SiteVerificationWebResourceResource request, core.String id, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "webResource/{id}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (id == null) paramErrors.add("id is required");
     if (id != null) urlParams["id"] = id;
     if (optParams != null) {
