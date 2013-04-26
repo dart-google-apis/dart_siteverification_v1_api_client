@@ -4,8 +4,8 @@ part of siteverification_v1_api_browser;
 /** Lets you programatically verify ownership of websites or domains with Google. */
 class SiteVerification extends BrowserClient {
 
-  WebResourceResource _webResource;
-  WebResourceResource get webResource => _webResource;
+  WebResourceResource_ _webResource;
+  WebResourceResource_ get webResource => _webResource;
 
   /** OAuth Scope2: Manage the list of sites and domains you control */
   static const core.String SITEVERIFICATION_SCOPE = "https://www.googleapis.com/auth/siteverification";
@@ -65,6 +65,6 @@ class SiteVerification extends BrowserClient {
   SiteVerification([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/siteVerification/v1/";
     rootUrl = "https://www.googleapis.com:443/";
-    _webResource = new WebResourceResource(this);
+    _webResource = new WebResourceResource_(this);
   }
 }
