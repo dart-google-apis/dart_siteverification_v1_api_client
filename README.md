@@ -8,7 +8,7 @@ Auto-generated client library for accessing the siteVerification v1 API.
 
 Lets you programatically verify ownership of websites or domains with Google.
 
-Official API documentation: http://code.google.com/apis/siteverification/
+Official API documentation: https://developers.google.com/site-verification/
 
 For web applications:
 ```

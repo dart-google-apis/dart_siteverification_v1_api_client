@@ -64,7 +64,7 @@ class SiteVerification extends ConsoleClient {
 
   SiteVerification([oauth2.OAuth2Console auth]) : super(auth) {
     basePath = "/siteVerification/v1/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _webResource = new WebResourceResource_(this);
   }
 }

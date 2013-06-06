@@ -64,7 +64,7 @@ class SiteVerification extends BrowserClient {
 
   SiteVerification([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/siteVerification/v1/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _webResource = new WebResourceResource_(this);
   }
 }
