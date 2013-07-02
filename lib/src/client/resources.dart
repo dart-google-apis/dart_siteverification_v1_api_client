@@ -13,7 +13,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> delete(core.String id, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "webResource/{id}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -30,16 +29,12 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "DELETE", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 
   /**
@@ -50,7 +45,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<SiteVerificationWebResourceResource> get(core.String id, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "webResource/{id}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -67,16 +61,13 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new SiteVerificationWebResourceResource.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new SiteVerificationWebResourceResource.fromJson(data));
   }
 
   /**
@@ -87,7 +78,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<SiteVerificationWebResourceGettokenResponse> getToken(SiteVerificationWebResourceGettokenRequest request, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "token";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -102,16 +92,13 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "POST", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new SiteVerificationWebResourceGettokenResponse.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new SiteVerificationWebResourceGettokenResponse.fromJson(data));
   }
 
   /**
@@ -124,7 +111,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<SiteVerificationWebResourceResource> insert(SiteVerificationWebResourceResource request, core.String verificationMethod, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "webResource";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -141,16 +127,13 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "POST", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new SiteVerificationWebResourceResource.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new SiteVerificationWebResourceResource.fromJson(data));
   }
 
   /**
@@ -159,7 +142,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<SiteVerificationWebResourceListResponse> list({core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "webResource";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -174,16 +156,13 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new SiteVerificationWebResourceListResponse.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new SiteVerificationWebResourceListResponse.fromJson(data));
   }
 
   /**
@@ -196,7 +175,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<SiteVerificationWebResourceResource> patch(SiteVerificationWebResourceResource request, core.String id, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "webResource/{id}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -213,16 +191,13 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "PATCH", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new SiteVerificationWebResourceResource.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new SiteVerificationWebResourceResource.fromJson(data));
   }
 
   /**
@@ -235,7 +210,6 @@ class WebResourceResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<SiteVerificationWebResourceResource> update(SiteVerificationWebResourceResource request, core.String id, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "webResource/{id}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -252,16 +226,13 @@ class WebResourceResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "PUT", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new SiteVerificationWebResourceResource.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new SiteVerificationWebResourceResource.fromJson(data));
   }
 }
 
