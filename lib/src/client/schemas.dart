@@ -1,4 +1,4 @@
-part of siteverification_v1_api_client;
+part of siteverification_v1_api;
 
 class SiteVerificationWebResourceGettokenRequest {
 
@@ -120,10 +120,7 @@ class SiteVerificationWebResourceListResponse {
   /** Create new SiteVerificationWebResourceListResponse from JSON data */
   SiteVerificationWebResourceListResponse.fromJson(core.Map json) {
     if (json.containsKey("items")) {
-      items = [];
-      json["items"].forEach((item) {
-        items.add(new SiteVerificationWebResourceResource.fromJson(item));
-      });
+      items = json["items"].map((itemsItem) => new SiteVerificationWebResourceResource.fromJson(itemsItem)).toList();
     }
   }
 
@@ -132,10 +129,7 @@ class SiteVerificationWebResourceListResponse {
     var output = new core.Map();
 
     if (items != null) {
-      output["items"] = new core.List();
-      items.forEach((item) {
-        output["items"].add(item.toJson());
-      });
+      output["items"] = items.map((itemsItem) => itemsItem.toJson()).toList();
     }
 
     return output;
@@ -163,10 +157,7 @@ class SiteVerificationWebResourceResource {
       id = json["id"];
     }
     if (json.containsKey("owners")) {
-      owners = [];
-      json["owners"].forEach((item) {
-        owners.add(item);
-      });
+      owners = json["owners"].toList();
     }
     if (json.containsKey("site")) {
       site = new SiteVerificationWebResourceResourceSite.fromJson(json["site"]);
@@ -181,10 +172,7 @@ class SiteVerificationWebResourceResource {
       output["id"] = id;
     }
     if (owners != null) {
-      output["owners"] = new core.List();
-      owners.forEach((item) {
-        output["owners"].add(item);
-      });
+      output["owners"] = owners.toList();
     }
     if (site != null) {
       output["site"] = site.toJson();
@@ -236,3 +224,16 @@ class SiteVerificationWebResourceResourceSite {
 
 }
 
+core.Map _mapMap(core.Map source, [core.Object convert(core.Object source) = null]) {
+  assert(source != null);
+  var result = new dart_collection.LinkedHashMap();
+  source.forEach((core.String key, value) {
+    assert(key != null);
+    if(convert == null) {
+      result[key] = value;
+    } else {
+      result[key] = convert(value);
+    }
+  });
+  return result;
+}

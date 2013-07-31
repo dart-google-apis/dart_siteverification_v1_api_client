@@ -1,9 +1,11 @@
-part of siteverification_v1_api_client;
+part of siteverification_v1_api;
 
-class WebResourceResource_ extends Resource {
+class WebResourceResource_ {
 
-  WebResourceResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  WebResourceResource_(Client client) :
+      _client = client;
 
   /**
    * Relinquish ownership of a website or domain.

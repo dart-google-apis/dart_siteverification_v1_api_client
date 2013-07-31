@@ -1,14 +1,20 @@
-library siteverification_v1_api_browser;
+library siteverification_v1_api.browser;
 
-import "siteverification_v1_api_client.dart";
-export "siteverification_v1_api_client.dart";
-
-import "dart:core" as core;
-import "dart:html" as html;
-import "dart:async" as async;
-import "dart:json" as JSON;
-import "package:js/js.dart" as js;
 import "package:google_oauth2_client/google_oauth2_browser.dart" as oauth;
 
-part "src/browser/browser_client.dart";
-part "src/browser/siteVerification.dart";
+import 'package:google_siteverification_v1_api/src/cloud_api_browser.dart';
+import "package:google_siteverification_v1_api/siteverification_v1_api_client.dart";
+
+/** Lets you programatically verify ownership of websites or domains with Google. */
+class SiteVerification extends Client with BrowserClient {
+
+  /** OAuth Scope2: Manage the list of sites and domains you control */
+  static const String SITEVERIFICATION_SCOPE = "https://www.googleapis.com/auth/siteverification";
+
+  /** OAuth Scope2: Manage your new site verifications with Google */
+  static const String SITEVERIFICATION_VERIFY_ONLY_SCOPE = "https://www.googleapis.com/auth/siteverification.verify_only";
+
+  final oauth.OAuth2 auth;
+
+  SiteVerification([oauth.OAuth2 this.auth]);
+}
