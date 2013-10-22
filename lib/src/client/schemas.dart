@@ -33,7 +33,7 @@ class SiteVerificationWebResourceGettokenRequest {
   }
 
   /** Return String representation of SiteVerificationWebResourceGettokenRequest */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -71,7 +71,7 @@ class SiteVerificationWebResourceGettokenRequestSite {
   }
 
   /** Return String representation of SiteVerificationWebResourceGettokenRequestSite */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -108,7 +108,7 @@ class SiteVerificationWebResourceGettokenResponse {
   }
 
   /** Return String representation of SiteVerificationWebResourceGettokenResponse */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -136,7 +136,7 @@ class SiteVerificationWebResourceListResponse {
   }
 
   /** Return String representation of SiteVerificationWebResourceListResponse */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -182,7 +182,7 @@ class SiteVerificationWebResourceResource {
   }
 
   /** Return String representation of SiteVerificationWebResourceResource */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
@@ -220,7 +220,7 @@ class SiteVerificationWebResourceResourceSite {
   }
 
   /** Return String representation of SiteVerificationWebResourceResourceSite */
-  core.String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.encode(this.toJson());
 
 }
 
