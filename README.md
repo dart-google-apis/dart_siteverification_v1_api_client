@@ -14,7 +14,7 @@ Adding dependency to pubspec.yaml
 
 ```
   dependencies:
-    google_siteverification_v1_api: '>=0.4.10'
+    google_siteverification_v1_api: '>=0.4.11'
 ```
 
 For web applications:
@@ -29,13 +29,13 @@ For console application:
   import "package:google_siteverification_v1_api/siteverification_v1_api_console.dart" as siteverificationclient;
 ```
 
-Working with out authentication the following constructor can be called:
+Working without authentication the following constructor can be called:
 
 ```
   var siteverification = new siteverificationclient.SiteVerification();
 ```
 
-Working with authentication then create a new `GoogleOAuth2` object and pass it to the constructor:
+To use authentication create a new `GoogleOAuth2` object and pass it to the constructor:
 
 
 ```
