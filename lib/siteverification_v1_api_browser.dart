@@ -6,6 +6,7 @@ import 'package:google_siteverification_v1_api/src/browser_client.dart';
 import "package:google_siteverification_v1_api/siteverification_v1_api_client.dart";
 
 /** Lets you programatically verify ownership of websites or domains with Google. */
+@deprecated
 class SiteVerification extends Client with BrowserClient {
 
   /** OAuth Scope2: Manage the list of sites and domains you control */
